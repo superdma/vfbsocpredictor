@@ -1,23 +1,31 @@
 # VFBSOCPredictor
 
 #### 介绍
-基于给定的液流电池信息，预测电池的SOC
+VFBSOCPredictor是一个基于机器学习的钒液流电池(VFB)SOC(荷电状态)预测项目。该项目利用历史循环数据（如电压、电流、温度等参数），通过iTransformer时序模型训练和预测电池SOC状态，帮助优化电池管理和预测寿命。项目基于Python实现，支持数据预处理、模型训练、预测和可视化。
 
 #### 软件架构
-软件架构说明
-
+项目采用模块化结构：
+- data_processing: 使用pandas处理Excel数据（如combined_SOC_data_20250604.xlsx）
+- model: iTransformer模型基于PyTorch实现时序预测
+- train_and_predict.py: 主脚本负责训练和预测，保存模型为.pth文件
+- visualization: 使用matplotlib生成SOC比较图表（如SOC_Comparison.png）
+- results/: 存储预测结果CSV和PNG文件
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 克隆仓库：git clone https://gitee.com/dongvma/vfbsocpredictor.git
+2. 进入目录：cd vfbsocpredictor
+3. 安装Python 3.8+环境
+4. 安装依赖：pip install pandas torch matplotlib scikit-learn openpyxl (基于项目文件推断)
+5. 验证安装：python -c "import pandas, torch; print('安装成功')"
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 准备数据：将循环数据放入root目录（如cycle79-80.xlsx）
+2. 训练模型：python train_and_predict.py --train (使用combined_SOC_data_20250604.xlsx训练)
+3. 进行预测：python train_and_predict.py --predict --cycle <cycle_num> (如Cycle_2)
+4. 查看结果：results/文件夹中包含预测CSV文件和PNG对比图
+5. 自定义：修改draw_picture.py调整可视化参数，或查看学习率曲线
 
 #### 参与贡献
 
@@ -29,7 +37,7 @@
 
 #### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+1.  使用 Readme_XXX.md 来支持不同的语言，例如 Readme_en.md, Readme_zh.md
 2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
 3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
 4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
