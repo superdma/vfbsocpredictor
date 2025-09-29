@@ -13,11 +13,11 @@ The project adopts a modular structure:
 
 #### Installation
 
-1. Clone the repository: git clone https://gitee.com/dongvma/vfbsocpredictor.git
-2. Enter the directory: cd vfbsocpredictor
-3. Install Python 3.8+ environment
-4. Install dependencies: pip install pandas torch matplotlib scikit-learn openpyxl (inferred from project files)
-5. Verify installation: python -c "import pandas, torch; print('Installation successful')"
+1. Clone the repository: `git clone https://gitee.com/dongvma/vfbsocpredictor.git`
+2. Enter the directory: `cd vfbsocpredictor`
+3. Install UV package manager (https://docs.astral.sh/uv/getting-started/installation/)
+4. Install dependencies: `uv sync`
+5. Verify installation: `python -c "import pandas, torch; print('Installation successful')"`
 
 #### Instructions
 

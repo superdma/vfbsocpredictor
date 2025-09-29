@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vfbsocpredictor"
+version = "0.1.0"
+description = "VFBSOC Predictor using iTransformer"
+dependencies = [
+    "numpy",
+    "pandas",
+    "torch",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "tqdm",
+    "openpyxl",
+]

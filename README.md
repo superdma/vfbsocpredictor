@@ -13,17 +13,17 @@ VFBSOCPredictor是一个基于机器学习的钒液流电池(VFB)SOC(荷电状�
 
 #### 安装教程
 
-1. 克隆仓库：git clone https://gitee.com/dongvma/vfbsocpredictor.git
-2. 进入目录：cd vfbsocpredictor
-3. 安装Python 3.8+环境
-4. 安装依赖：pip install pandas torch matplotlib scikit-learn openpyxl (基于项目文件推断)
-5. 验证安装：python -c "import pandas, torch; print('安装成功')"
+1. 克隆仓库：`git clone https://gitee.com/dongvma/vfbsocpredictor.git`
+2. 进入目录：`cd vfbsocpredictor`
+3. 确保安装了 UV 包管理器（https://docs.astral.sh/uv/getting-started/installation/）
+4. 安装依赖：`uv sync`
+5. 验证安装：`python -c "import pandas, torch; print('安装成功')"`
 
 #### 使用说明
 
 1. 准备数据：将循环数据放入root目录（如cycle79-80.xlsx）
-2. 训练模型：python train_and_predict.py --train (使用combined_SOC_data_20250604.xlsx训练)
-3. 进行预测：python train_and_predict.py --predict --cycle <cycle_num> (如Cycle_2)
+2. 训练模型：python train_and_predict.py
+3. 进行预测：python train_and_predict.py
 4. 查看结果：results/文件夹中包含预测CSV文件和PNG对比图
 5. 自定义：修改draw_picture.py调整可视化参数，或查看学习率曲线
 
