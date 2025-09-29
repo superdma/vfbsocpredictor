@@ -13,7 +13,7 @@ VFBSOCPredictor是一个基于机器学习的钒液流电池(VFB)SOC(荷电状�
 
 #### 安装教程
 
-1. 克隆仓库：`git clone https://github.com/superdma/vfbsocpredictor.git`
+1. 克隆仓库：`git clone `
 2. 进入目录：`cd vfbsocpredictor`
 3. 确保安装了 UV 包管理器（https://docs.astral.sh/uv/getting-started/installation/）
 4. 安装依赖：`uv sync`
