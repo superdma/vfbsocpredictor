@@ -13,7 +13,7 @@ The project adopts a modular structure:
 
 #### Installation
 
-1. Clone the repository: `git clone https://gitee.com/dongvma/vfbsocpredictor.git`
+1. Clone the repository: `git clone https://github.com/superdma/vfbsocpredictor.git`
 2. Enter the directory: `cd vfbsocpredictor`
 3. Install UV package manager (https://docs.astral.sh/uv/getting-started/installation/)
 4. Install dependencies: `uv sync`
