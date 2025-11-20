@@ -1,36 +1,36 @@
 # VFBSOCPredictor
 
-#### 介绍
-VFBSOCPredictor是一个基于机器学习的钒液流电池(VFB)SOC(荷电状态)预测项目。该项目利用历史循环数据（如电压、电流、温度等参数），通过iTransformer时序模型训练和预测电池SOC状态，帮助优化电池管理和预测寿命。项目基于Python实现，支持数据预处理、模型训练、预测和可视化。
+#### Description
+VFBSOCPredictor is a machine learning-based Vanadium Flow Battery (VFB) SOC (State of Charge) prediction project. This project uses historical cycle data (such as voltage, current, temperature, etc.), trains and predicts battery SOC status through the iTransformer time-series model, helping to optimize battery management and predict lifespan. The project is implemented in Python, supporting data preprocessing, model training, prediction, and visualization.
 
-#### 软件架构
-项目采用模块化结构：
-- data_processing: 使用pandas处理Excel数据（如combined_SOC_data_20250604.xlsx）
-- model: iTransformer模型基于PyTorch实现时序预测
-- train_and_predict.py: 主脚本负责训练和预测，保存模型为.pth文件
-- visualization: 使用matplotlib生成SOC比较图表（如SOC_Comparison.png）
-- results/: 存储预测结果CSV和PNG文件
+#### Software Architecture
+The project adopts a modular structure:
+- data_processing: Uses pandas to process Excel data (e.g., combined_SOC_data_20250604.xlsx)
+- model: iTransformer model based on PyTorch for time-series prediction
+- train_and_predict.py: Main script responsible for training and prediction, saving models as .pth files
+- visualization: Uses matplotlib to generate SOC comparison charts (e.g., SOC_Comparison.png)
+- results/: Stores prediction result CSV and PNG files
 
-#### 安装教程
+#### Installation
 
-1. 克隆仓库：`git clone `
-2. 进入目录：`cd vfbsocpredictor`
-3. 确保安装了 UV 包管理器（https://docs.astral.sh/uv/getting-started/installation/）
-4. 安装依赖：`uv sync`
-5. 验证安装：`python -c "import pandas, torch; print('安装成功')"`
+1. Clone the repository: `git clone https://gitee.com/dongvma/vfbsocpredictor.git`
+2. Enter the directory: `cd vfbsocpredictor`
+3. Install UV package manager (https://docs.astral.sh/uv/getting-started/installation/)
+4. Install dependencies: `uv sync`
+5. Verify installation: `python -c "import pandas, torch; print('Installation successful')"`
 
-#### 使用说明
+#### Instructions
 
-1. 准备数据：将循环数据放入root目录（如cycle79-80.xlsx）
-2. 训练模型：python train_and_predict.py
-3. 进行预测：python train_and_predict.py
-4. 查看结果：results/文件夹中包含预测CSV文件和PNG对比图
-5. 自定义：修改draw_picture.py调整可视化参数，或查看学习率曲线
+1. Prepare data: Place cycle data in the root directory (e.g., cycle79-80.xlsx)
+2. Train model: python train_and_predict.py --train (using combined_SOC_data_20250604.xlsx for training)
+3. Perform prediction: python train_and_predict.py --predict --cycle <cycle_num> (e.g., Cycle_2)
+4. View results: The results/ folder contains prediction CSV files and PNG comparison charts
+5. Customize: Modify draw_picture.py to adjust visualization parameters, or view learning rate curves
 
-#### 参与贡献
+#### Contribution
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  Fork the repository
+2.  Create Feat_xxx branch
+3.  Commit your code
+4.  Create Pull Request
 
